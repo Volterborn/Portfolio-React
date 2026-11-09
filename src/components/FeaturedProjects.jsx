@@ -1,3 +1,4 @@
+import { asset } from '../utils/asset';
 import { useState, useMemo, useEffect } from 'react';
 
 
@@ -272,7 +273,7 @@ const FeaturedProjects = () => {
                 {/* Zone Logo du projet */}
                 <div className="h-40 bg-gray-800/50 flex items-center justify-center p-6 border-b border-gray-800 relative">
                   <img
-                    src={project.logo}
+                    src={asset(project.logo)}
                     alt={`Logo ${project.title}`}
                     className="h-24 w-24 rounded-xl object-contain group-hover:scale-105 transition-transform duration-300"
                     onError={(e) => {
@@ -347,7 +348,7 @@ const FeaturedProjects = () => {
             <div className="flex items-center gap-4 pr-10">
               <div className="w-12 h-12 rounded-xl bg-gray-800 border border-gray-700 flex items-center justify-center p-2 shrink-0">
                 <img
-                  src={activeProject.logo}
+                  src={asset(activeProject.logo)}
                   alt={activeProject.title}
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => (e.target.style.display = "none")}
@@ -375,7 +376,7 @@ const FeaturedProjects = () => {
               </h4>
               <div className="rounded-xl overflow-hidden border border-gray-700 bg-gray-950 shadow-inner flex items-center justify-center min-h-[220px]">
                 <img
-                  src={activeProject.screenshot}
+                  src={asset(activeProject.screenshot)}
                   alt={`Capture d'écran de ${activeProject.title}`}
                   className="w-full max-h-[380px] object-contain"
                   onError={(e) => {

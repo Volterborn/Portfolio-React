@@ -1,5 +1,6 @@
+import { asset } from '../utils/asset';
 const Contact = () => {
-  const cvPath = "/CV_Alexy_Ringard.pdf";
+  const cvPath = asset("/CV_Alexy_Ringard.pdf");
 
   return (
     <section id="contact" className="py-20 border-t border-gray-700/60">

@@ -1,3 +1,4 @@
+import { asset } from '../utils/asset';
 const About = () => {
   const skills = [
     { name: "GitHub", icon: "/images/github-original.svg" },
@@ -81,7 +82,7 @@ const About = () => {
         <div className="bg-gray-900 border border-gray-700/60 rounded-2xl shadow-lg shadow-black/10 p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center text-center md:text-left">
           <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-blue-500/40 shrink-0">
             <img
-              src="/images/Alexy-ringard.jpg"
+              src={asset("/images/Alexy-ringard.jpg")}
               alt="Photo de Alexy Ringard"
               className="w-full h-full object-cover object-top"
               onError={(e) => {
@@ -150,7 +151,7 @@ const About = () => {
                 className="flex items-center gap-2.5 bg-gray-800 px-4 py-2.5 rounded-lg border border-gray-700 hover:border-blue-500 transition-colors"
               >
                 <img
-                  src={skill.icon}
+                  src={asset(skill.icon)}
                   alt={skill.name}
                   className="w-5 h-5"
                   onError={(e) => (e.target.style.display = 'none')}

@@ -1,3 +1,4 @@
+import { asset } from '../utils/asset';
 const Hero = () => {
   return (
     <section id="accueil" className="py-20 md:min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center text-center">
@@ -24,7 +25,7 @@ const Hero = () => {
           Voir mes projets
         </a>
         <a
-          href="/CV_Alexy_Ringard.pdf"
+          href={asset("/CV_Alexy_Ringard.pdf")}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gray-900 border border-gray-700 hover:border-gray-500 text-white px-6 py-3 rounded-lg font-medium transition-colors"
